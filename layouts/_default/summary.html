@@ -1,0 +1,15 @@
+<a href="{{ .Permalink }}" class="catalogue-item">
+    <div>
+        <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+        <h1 class="catalogue-title">{{ .Title }}</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+            <ul>
+            {{ range findRE "<h1.*?>(.|\n)*?</h1>" .Content }}
+            <li> {{ replaceRE "<[^>]*>" "" . }} </li>
+            {{ end }}
+            </ul>
+        </p>
+    </div>
+</a>
