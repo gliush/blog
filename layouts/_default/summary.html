@@ -7,7 +7,7 @@
         <p>
             <ul>
             {{ range findRE "<h1.*?>(.|\n)*?</h1>" .Content }}
-            <li> {{ replaceRE "<[^>]*>" "" . }} </li>
+            <li> {{ replaceRE "<[^>]*>" "" . | htmlUnescape }} </li>
             {{ end }}
             </ul>
         </p>
