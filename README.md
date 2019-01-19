@@ -18,3 +18,10 @@ To create new podcast note
 To create new book note
 
     hugo new book/Some-cool-name.md
+
+# Links
+
+I used a very good looking theme for hugo:
+    https://github.com/EmielH/tale-hugo
+
+Though, I had to change fonts for it as it looked ugly for cyrillic.
