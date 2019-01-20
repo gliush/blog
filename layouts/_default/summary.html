@@ -1,15 +1,26 @@
-<a href="{{ .Permalink }}" class="catalogue-item">
-    <div>
-        <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
-        <h1 class="catalogue-title">{{ .Title }}</h1>
-        <div class="catalogue-line"></div>
+<div class="catalogue-item">
+    <a href="{{ .Permalink }}"> </a>
+    <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+    <h1 class="catalogue-title">{{ .Title }}</h1>
+    <div class="catalogue-line"></div>
 
-        <p>
-            <ul>
-            {{ range findRE "<h1.*?>(.|\n)*?</h1>" .Content }}
-            <li> {{ replaceRE "<[^>]*>" "" . | htmlUnescape }} </li>
+    <p>
+        <ul>
+        {{ range findRE "<h1.*?>(.|\n)*?</h1>" .Content }}
+        <li> {{ replaceRE "<[^>]*>" "" . | htmlUnescape }} </li>
+        {{ end }}
+        </ul>
+    </p>
+
+    {{ if .Param "tags" }}
+    <p>
+        tags: 
+        {{ range .Param "tags" }} 
+            {{ $name := . }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                <a href="{{ .Permalink }}"> {{ $name }} </a>
             {{ end }}
-            </ul>
-        </p>
-    </div>
-</a>
+        {{ end }}
+    </p>
+    {{ end }}
+</div>
