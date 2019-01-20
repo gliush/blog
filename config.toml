@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "http://gliush.github.io/"
 languageCode = "en-us"
-title = "DevZen Podcast Notes"
+title = "Ivan Glushkov blog"
 theme = "tale"
 #theme = "aether"
 
