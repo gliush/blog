@@ -1,7 +1,8 @@
 <div class="catalogue-item">
-    <a href="{{ .Permalink }}"> </a>
     <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>
+    <a href="{{ .Permalink }}">
     <h1 class="catalogue-title">{{ .Title }}</h1>
+    </a>
     <div class="catalogue-line"></div>
 
     <p>
