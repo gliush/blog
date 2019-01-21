@@ -1,6 +1,6 @@
 baseURL = "http://gliush.github.io/"
 languageCode = "en-us"
-title = "Ivan Glushkov blog"
+title = "Gliush Notebook"
 theme = "tale"
 #theme = "aether"
 
