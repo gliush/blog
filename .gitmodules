@@ -1,8 +1,8 @@
-[submodule "themes/tale"]
-	path = themes/tale
-	url = https://github.com/gliush/tale-hugo.git
-	branch = gliush-blog
 [submodule "public"]
 	path = public
 	url = git@github.com:gliush/gliush.github.io.git
 	branch = master
+[submodule "themes/ezhil"]
+	path = themes/ezhil
+	url = git@github.com:gliush/ezhil.git
+	branch = gliush-blog
